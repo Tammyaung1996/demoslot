@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Inter&family=Poppins:wght@300;400;500&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css"
+    />
+
+    <!-- font awesome  -->
+    <script
+      src="https://kit.fontawesome.com/b829c5162c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="main">
+      <!-- NAVBAR START -->
+      <div
+        class="d-flex justify-content-between align-items-center fixed-top mx-auto navs"
+      >
+        <div class="nav-img ms-2">
+          <a
+            href="index.html"
+            class="text-decoration-none"
+            style="color: #2ec59c; font-size: 18px"
+          >
+            <img
+              src="https://delightmyanmar.pro/user_app/assets/img/logo.png"
+              alt="logo"
+              style="width: 60px; height: 60px"
+            />
+          </a>
+        </div>
+        <div class="nav-login">
+          <!-- before login -->
+          <div class="d-flex justify-content-around align-items-center me-3">
+            <a
+              href="./login.html"
+              class="btn-login text-decoration-none d-block"
+              >လော့ဂ်အင်</a
+            >
+            <a
+              href="./register.html"
+              class="btn-register text-decoration-none mx-2"
+              >အကောင့်သစ်ဖွင့်ရန်</a
+            >
+            <img src="images/myanmarlogo.png" alt="myanmarlogo" />
+          </div>
+
+          <!-- after login -->
+          <!-- <div class="d-flex justify-content-around align-items-center me-3">
+            <a
+              href="#topupModal"
+              role="button"
+              data-bs-toggle="modal"
+              class="btn-login text-decoration-none"
+              >500000000000</a
+            >
+            <a
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-display="static"
+              aria-expanded="false"
+              class="text-decoration-none mx-2"
+              ><img
+                src="./images/user_avatar.png"
+                alt=""
+                style="border-radius: 50%"
+            /></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdowns">
+              <li><h6 class="dropdown-header fs-4">login User Name</h6></li>
+              <li>
+                <a class="dropdown-item" href="./user_information.html"
+                  ><svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="ä¸ªäººä¿¡æ¯">
+                      <path
+                        id="Vector"
+                        d="M7.76527 11.695H7.75949H7.76527ZM8.9365 10.7242H8.93939C9.59007 10.7242 10.1164 10.1872 10.1164 9.52334V6.20091C10.1164 5.53702 9.59007 5 8.93939 5H8.9365C8.28582 5 7.75949 5.53702 7.75949 6.20091V9.52629C7.75949 10.1872 8.28582 10.7242 8.9365 10.7242ZM27.9884 8.80338C27.9219 7.10676 26.5887 7.39297 26.5887 7.39297H25.646V10.2639C25.646 10.2639 25.4551 11.695 24.2376 11.698H24.2232C23.827 11.698 23.13 11.695 22.3521 11.698H21.8807C20.6372 11.6567 20.4695 10.2639 20.4695 10.2639V7.39297H11.5277V10.2639C11.5277 10.2639 11.3599 11.6567 10.1164 11.698H9.64502C8.86131 11.695 8.16146 11.698 7.76527 11.698H7.76238C7.72479 11.698 7.74214 11.698 7.76238 11.698C6.54199 11.695 6.35113 10.2639 6.35113 10.2639V7.39297H5.41125C5.41125 7.39297 4.07808 7.10676 4.01157 8.80338C4.00289 8.87124 4 8.91255 4 8.91255C4 8.91255 4.00289 24.6041 4.00289 25.3004C4.00289 26.9852 5.66285 27 5.66285 27H26.3371C26.3371 27 27.9971 26.9852 27.9971 25.3004C27.9971 24.6041 28 8.91255 28 8.91255C28 8.91255 27.9971 8.87124 27.9884 8.80338V8.80338ZM16.0304 23.5448C16.0304 24.8313 13.633 25.1263 11.3802 25.1263C9.13315 25.1263 6.70394 24.8342 6.70394 23.5448V23.1907C6.70394 22.2465 8.36101 21.2876 9.77515 20.7623C9.87637 20.724 10.3651 20.4496 10.0933 19.7149C9.39342 18.9802 8.8642 17.7881 8.8642 16.6167C8.8642 14.8227 10.0181 13.8814 11.3686 13.8814C12.7191 13.8814 13.8788 14.8227 13.8788 16.6167C13.8788 17.7851 13.3467 18.9683 12.6497 19.706H12.6526C12.3866 20.541 12.8117 20.7387 12.8811 20.7623C14.3646 21.2669 16.0304 22.217 16.0304 23.1907V23.5448ZM24.4748 23.1789H19.7609C19.116 23.1789 18.5926 22.6449 18.5926 21.9869C18.5926 21.3289 19.116 20.7948 19.7609 20.7948H24.4748C25.1197 20.7948 25.6431 21.3289 25.6431 21.9869C25.6431 22.6449 25.1197 23.1789 24.4748 23.1789ZM24.4748 18.3871H19.7609C19.116 18.3871 18.5926 17.853 18.5926 17.195C18.5926 16.537 19.116 16.003 19.7609 16.003H24.4748C25.1197 16.003 25.6431 16.537 25.6431 17.195C25.6431 17.853 25.1197 18.3871 24.4748 18.3871ZM24.2376 11.695H24.2261H24.2376C24.2376 11.695 24.2347 11.695 24.2376 11.695ZM23.0548 10.7242H23.0577C23.7084 10.7242 24.2347 10.1872 24.2347 9.52334V6.20091C24.2347 5.53702 23.7084 5 23.0577 5H23.0548C22.4041 5 21.8778 5.53702 21.8778 6.20091V9.52629C21.8807 10.1872 22.407 10.7242 23.0548 10.7242V10.7242Z"
+                        fill="currentColor"
+                      ></path>
+                    </g>
+                  </svg>
+                  သတင်းအချက်အလက်</a
+                >
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="./wallet.html"
+                  ><svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="icon/é’±åŒ…">
+                      <g id="icon/é’±åŒ…_2">
+                        <path
+                          id="è·¯å¾„"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M28 12V23C28 24.6569 26.6569 26 25 26H7C5.34315 26 4 24.6569 4 23V12H28Z"
+                          fill="currentColor"
+                        ></path>
+                        <path
+                          id="è·¯å¾„_2"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M22.5313 21.2999C22.4827 21.2118 22.4532 21.1137 22.4449 21.0125C22.4213 20.8844 22.4213 20.7529 22.4449 20.6248C23.1886 20.0299 23.5854 19.0868 23.4966 18.1236C23.4966 17.3497 23.0578 16 21.7413 16H21.6534C20.614 16.0689 19.8258 16.9887 19.8932 18.0544V18.0562C19.8947 18.0784 19.8969 18.1012 19.8992 18.1239C19.8364 19.0771 20.2109 20.005 20.9087 20.6251C21.0006 20.7484 21.0471 20.9019 21.0398 21.0579C21.0125 21.1588 20.95 21.2455 20.8647 21.3011C20.303 21.7782 18.2841 22.2998 18.1527 23.3707C18.0648 23.8027 17.4512 24.5226 19.4692 24.8199C20.236 24.9423 21.0108 25.0024 21.7865 24.9999C26.4291 24.9999 25.4637 23.9917 25.2972 23.407C25.1643 22.2988 23.1369 21.7772 22.5313 21.2999V21.2999Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          id="çŸ©å½¢"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.34195 13H8.34195L7 16H5L6.34195 13Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          id="çŸ©å½¢å¤‡ä»½"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.34195 13H11.3419L10 16H8L9.34195 13Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          id="è·¯å¾„_3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M25 6C26.6569 6 28 7.34315 28 9V10H4V9C4 7.34315 5.34315 6 7 6H25Z"
+                          fill="currentColor"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                  ပိုက်ဆံအိတ်</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="icon/èµ„é‡‘æ˜Žç»†">
+                      <g id="icon/èµ„é‡‘æ˜Žç»†_2">
+                        <rect
+                          id="çŸ©å½¢"
+                          opacity="0.01"
+                          width="32"
+                          height="32"
+                          fill="currentColor"
+                        ></rect>
+                        <g id="ç¼–ç»„">
+                          <path
+                            id="å½¢çŠ¶ç»“åˆ"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M2.66667 7.84316C2.66667 7.19341 3.19339 6.66669 3.84314 6.66669H20.3137C20.9635 6.66669 21.4902 7.19341 21.4902 7.84316V24.1569C21.4902 24.8066 20.9635 25.3334 20.3137 25.3334H3.84314C3.19339 25.3334 2.66667 24.8066 2.66667 24.1569V22.0895C3.58054 21.7692 4.23529 20.9049 4.23529 19.8889C4.23529 18.873 3.58054 18.0087 2.66667 17.6883V14.3117C3.58054 13.9914 4.23529 13.1271 4.23529 12.1111C4.23529 11.0952 3.58054 10.2309 2.66667 9.91057V7.84316Z"
+                            fill="currentColor"
+                          ></path>
+                          <rect
+                            id="çŸ©å½¢_2"
+                            x="23.0588"
+                            y="6.66669"
+                            width="6.27451"
+                            height="18.6667"
+                            rx="1.17647"
+                            fill="currentColor"
+                          ></rect>
+                        </g>
+                        <path
+                          id="Vector"
+                          d="M12.0001 10.5167C10.6928 10.5167 9.33836 10.7424 8.30493 11.183C7.28188 11.6191 6.51667 12.2937 6.51667 13.2174V18.4579C6.51667 19.3206 7.18862 20.0788 8.178 20.6122C9.17511 21.1498 10.5337 21.4834 12.0001 21.4834C13.4662 21.4834 14.8247 21.1498 15.8219 20.6122C16.8113 20.0789 17.4833 19.3206 17.4833 18.4579V13.2174C17.4833 12.2937 16.718 11.6191 15.6949 11.183C14.6615 10.7424 13.307 10.5167 12.0001 10.5167ZM12.0001 11.7446C13.3608 11.7446 14.4516 11.9784 15.1969 12.2903C15.5701 12.4465 15.8511 12.62 16.0361 12.7888C16.2248 12.961 16.2944 13.1098 16.2944 13.2174C16.2944 13.3251 16.2248 13.474 16.0361 13.6463C15.8511 13.8151 15.5701 13.9887 15.1969 14.1449C14.4516 14.4569 13.3608 14.6906 12.0001 14.6906C10.6393 14.6906 9.54844 14.4569 8.80315 14.1449C8.42995 13.9887 8.14893 13.8151 7.96391 13.6463C7.77521 13.474 7.70555 13.3251 7.70555 13.2174C7.70555 13.1098 7.77517 12.961 7.96389 12.7888C8.14891 12.62 8.42994 12.4465 8.80314 12.2903C9.54843 11.9784 10.6393 11.7446 12.0001 11.7446ZM12.0001 20.2563C10.6851 20.2563 9.59737 19.9675 8.84311 19.5888C8.46558 19.3992 8.176 19.1894 7.98304 18.9862C7.78711 18.7798 7.70555 18.5965 7.70555 18.4579V17.5971C8.714 18.2743 10.2699 18.7008 12.0001 18.7008C13.7297 18.7008 15.2858 18.2743 16.2944 17.5971V18.4579C16.2944 18.5965 16.2129 18.7798 16.017 18.9862C15.824 19.1894 15.5344 19.3992 15.1569 19.5888C14.4027 19.9675 13.315 20.2563 12.0001 20.2563ZM12.0001 17.4737C10.7669 17.4737 9.67702 17.2278 8.90029 16.8808C8.5115 16.7072 8.20709 16.5108 8.00235 16.3126C7.79552 16.1123 7.70555 15.9255 7.70555 15.7686V14.9446C8.77747 15.589 10.4257 15.9186 12.0001 15.9186C13.5741 15.9186 15.2223 15.5889 16.2944 14.9446V15.7686C16.2944 15.9255 16.2045 16.1123 15.9976 16.3126C15.7928 16.5108 15.4884 16.7072 15.0996 16.8808C14.3228 17.2278 13.2329 17.4737 12.0001 17.4737Z"
+                          fill="white"
+                          stroke="white"
+                          stroke-width="0.3"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                  ငွေဝင်/ငွေထွက်မှတ်တမ်း</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./bet-record.html"
+                  ><svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="icon/ä¸ªäººä¸&shy;å¿ƒ/æ³¨å•è¯¦æƒ…">
+                      <path
+                        id="Fill 1"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.2222 5.33337H17.7777C18.7596 5.33337 19.5557 6.12928 19.5557 7.11112C19.5557 8.093 18.7596 8.88887 17.7777 8.88887H14.2222C13.2404 8.88887 12.4445 8.093 12.4445 7.11112C12.4445 6.12928 13.2404 5.33337 14.2222 5.33337V5.33337ZM10.6667 7.11112C10.6667 9.07484 12.2585 10.6668 14.2222 10.6668H17.7777C19.7415 10.6668 21.3334 9.07484 21.3334 7.11112H23.1112C25.0749 7.11112 26.6667 8.70307 26.6667 10.6668V23.1112C26.6667 25.0749 25.0749 26.6667 23.1112 26.6667H8.88883C6.92528 26.6667 5.33333 25.0749 5.33333 23.1112V10.6668C5.33333 8.70307 6.92528 7.11112 8.88883 7.11112H10.6667Z"
+                        fill="currentColor"
+                      ></path>
+                      <g id="ç¼–ç»„">
+                        <path
+                          id="è·¯å¾„"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.0347 19.9237L10.4071 19.2961C10.0601 18.9485 9.49689 18.9481 9.14939 19.2952C8.80178 19.6423 8.80137 20.2054 9.14845 20.553L10.4071 21.81C10.5733 21.9775 10.7995 22.0716 11.0355 22.0716C11.2715 22.0716 11.4978 21.9775 11.6641 21.81L14.1778 19.2961C14.4026 19.0716 14.4907 18.7442 14.4086 18.4372C14.3266 18.1302 14.087 17.8903 13.7802 17.8078C13.4733 17.7254 13.1457 17.813 12.921 18.0374L11.0365 19.9237H11.0347Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          id="è·¯å¾„_2"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.0347 14.5902L10.4071 13.9626C10.1827 13.7379 9.85522 13.6499 9.54817 13.7319C9.24123 13.8138 9.0013 14.0535 8.91883 14.3603C8.83637 14.6673 8.92397 14.9947 9.14845 15.2196L10.4071 16.4765C10.5733 16.644 10.7995 16.7383 11.0355 16.7383C11.2715 16.7383 11.4978 16.644 11.664 16.4765L14.1778 13.9626C14.4026 13.7382 14.4907 13.4108 14.4086 13.1038C14.3266 12.7967 14.087 12.5569 13.7802 12.4745C13.4733 12.392 13.1457 12.4795 12.921 12.7039L11.0365 14.5902H11.0347Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          id="è·¯å¾„_3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.889 19.5557C16.398 19.5557 16 19.9536 16 20.4445C16 20.9355 16.398 21.3334 16.889 21.3334H22.2222C22.7132 21.3334 23.1112 20.9355 23.1112 20.4445C23.1112 19.9536 22.7132 19.5557 22.2222 19.5557H16.889Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          id="è·¯å¾„_4"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.889 14.2223C16.398 14.2223 16 14.6202 16 15.1113C16 15.6021 16.398 16 16.889 16H22.2222C22.7132 16 23.1112 15.6021 23.1112 15.1113C23.1112 14.6202 22.7132 14.2223 22.2222 14.2223H16.889Z"
+                          fill="white"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                  လောင်းကြေးအသေးစိတ်</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="icon/ä¸ªäººä¸&shy;å¿ƒ/æ—¶é—´è®¾ç½®">
+                      <circle
+                        id="æ¤&shy;åœ†å½¢"
+                        cx="16"
+                        cy="16"
+                        r="12"
+                        fill="currentColor"
+                      ></circle>
+                      <g id="VIP 10">
+                        <path
+                          id="Vector"
+                          d="M18.6749 17.869V23.3244H19.8213V21.3434C21.6536 21.3706 22.5826 21.289 22.84 19.7253C22.9216 19.268 22.7585 18.7548 22.5554 18.4734C21.951 17.6548 20.1331 17.8578 18.6749 17.869ZM19.8213 20.416V18.8251C20.6719 18.798 21.5721 18.7036 21.7208 19.3911C21.9654 20.5407 20.7775 20.4432 19.8213 20.416ZM16.4669 17.8962C16.4797 19.7013 16.4797 21.5193 16.4941 23.3244H17.6133V17.869C17.2359 17.885 16.857 17.885 16.4669 17.8962ZM18.6366 10.5957C16.8698 12.3593 15.1078 14.11 13.3283 15.8768V10.5957H9.05766C9.07045 10.9459 9.07045 11.3088 9.08484 11.6606H10.1225V23.3164C14.3659 19.0698 18.5966 14.8391 22.84 10.5957H18.6366Z"
+                          fill="white"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                  VIP</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./feedbackform.html"
+                  ><svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="icon//æ„è§åé¦ˆ">
+                      <g id="icon//æ„è§åé¦ˆ_2">
+                        <g id="ç¼–ç»„">
+                          <path
+                            id="Fill 1"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M19.4621 7.88033C19.5433 8.03768 19.6482 8.18168 19.7733 8.30722C19.8965 8.42338 20.0609 8.48607 20.2303 8.48185H23.8573V8.09379C23.8557 7.9727 23.8393 7.85209 23.8087 7.7349C23.755 7.56299 23.6655 7.40437 23.5462 7.26923C23.3612 7.03221 23.1598 6.80859 22.9432 6.59997C22.6807 6.33802 22.3306 6.0082 21.8833 5.62997C21.436 5.25163 21.1346 4.97032 20.8916 4.77635C20.6485 4.58226 20.3859 4.39801 20.2012 4.27189C20.0518 4.17257 19.8878 4.09725 19.715 4.04885C19.576 4.03385 19.4357 4.03385 19.2968 4.04885H19.2482V6.91034C19.2515 7.0519 19.2743 7.1922 19.3162 7.32747C19.3513 7.49663 19.4102 7.65993 19.4913 7.81248L19.4621 7.88033Z"
+                            fill="currentColor"
+                          ></path>
+                          <g id="ç¼–ç»„_2">
+                            <path
+                              id="Fill 3"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M20.2497 9.98536C19.8368 9.99942 19.4284 9.89518 19.0731 9.6846C18.7541 9.49956 18.4789 9.24813 18.2661 8.94737C18.0616 8.65121 17.9072 8.32343 17.809 7.97738C17.7186 7.66164 17.6697 7.3356 17.6632 7.00738V4.00032H8.25055C7.85683 3.99346 7.4692 4.0977 7.13226 4.30096C6.789 4.49916 6.47767 4.74774 6.20853 5.03819C5.94331 5.32474 5.72648 5.6524 5.56666 6.00818C5.41571 6.34738 5.33632 6.71383 5.33333 7.08496V23.4007C5.33515 23.8072 5.44599 24.2057 5.65421 24.5551C5.86989 24.9164 6.13867 25.2434 6.45162 25.5251C6.76468 25.8018 7.11481 26.0335 7.49202 26.2138C7.79407 26.3684 8.12538 26.4577 8.46438 26.4758H15.2711L23.8573 17.9201V9.98536H20.2497Z"
+                              fill="currentColor"
+                            ></path>
+                          </g>
+                          <path
+                            id="Fill 5"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M21.8639 22.4307L20.9791 23.3038L20.1623 24.1089L19.5497 24.7103L19.2287 25.0207C19.0633 25.1755 18.928 25.3597 18.83 25.5639C18.7783 25.6843 18.7329 25.8073 18.694 25.9325L18.5092 26.4951L18.3341 27.0772C18.2856 27.2711 18.2563 27.4166 18.2369 27.5039C18.1958 27.6406 18.2133 27.7882 18.2856 27.9113C18.3536 27.9889 18.48 28.0181 18.6842 27.9889C18.8318 27.9608 18.9778 27.9252 19.1218 27.8823C19.3324 27.8398 19.5402 27.7846 19.7441 27.7174C19.9581 27.6592 20.1623 27.5815 20.3761 27.5137L20.8916 27.2809L21.1833 27.1062L21.4555 26.9025L22.2917 26.0684L23.1085 25.2729L23.9935 24.4096L26.3855 22.0912L24.3144 20.0736L21.8639 22.4307ZM27.9997 20.2094C27.9871 20.0444 27.9545 19.8814 27.9024 19.7243C27.7977 19.4886 27.6493 19.2747 27.4649 19.0939C27.3187 18.922 27.1404 18.7803 26.9398 18.6767C26.7627 18.5825 26.5665 18.5296 26.3661 18.5215C26.1324 18.4968 25.9001 18.5789 25.734 18.7447L25.4229 19.0066C25.3181 19.1096 25.2078 19.2068 25.0923 19.2976L27.1829 21.3152C27.2459 21.2726 27.3045 21.2238 27.3579 21.1697L27.5329 20.9854L27.7565 20.7623C27.9162 20.6234 28.0055 20.4207 27.9997 20.2094V20.2094Z"
+                            fill="currentColor"
+                          ></path>
+                        </g>
+                        <g id="ç¼–ç»„ 2" filter="url(#filter0_d_55_9234)">
+                          <path
+                            id="è·¯å¾„"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M20.2497 14.2103C19.9538 14.4909 19.5592 14.6441 19.1509 14.6371H9.94244C9.53977 14.6454 9.15075 14.4916 8.86306 14.2103C8.57005 13.9373 8.4075 13.5528 8.41575 13.1529C8.40955 12.7507 8.57167 12.364 8.86306 12.0859C9.1472 11.7982 9.53771 11.6403 9.94244 11.6494H19.1898C19.6 11.6418 19.9961 11.7991 20.2886 12.0859C20.5847 12.3616 20.7506 12.749 20.7456 13.1529C20.7503 13.554 20.5842 13.9383 20.2886 14.2103H20.2497Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            id="è·¯å¾„å¤‡ä»½"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M20.2497 19.5436C19.9538 19.8243 19.5592 19.9775 19.1509 19.9705H9.94244C9.53977 19.9787 9.15075 19.8249 8.86306 19.5436C8.57005 19.2707 8.4075 18.8862 8.41575 18.4863C8.40955 18.084 8.57167 17.6974 8.86306 17.4193C9.1472 17.1316 9.53771 16.9736 9.94244 16.9828H19.1898C19.6 16.9751 19.9961 17.1325 20.2886 17.4193C20.5847 17.6949 20.7506 18.0823 20.7456 18.4863C20.7503 18.8874 20.5842 19.2717 20.2886 19.5436H20.2497Z"
+                            fill="white"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_55_9234"
+                        x="4.41545"
+                        y="9.64905"
+                        width="20.3303"
+                        height="16.3218"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        ></feFlood>
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        ></feColorMatrix>
+                        <feOffset dy="2"></feOffset>
+                        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0.00529494 0 0 0 0 0.154468 0 0 0 0 0.043146 0 0 0 0.758486 0"
+                        ></feColorMatrix>
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_55_9234"
+                        ></feBlend>
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_55_9234"
+                          result="shape"
+                        ></feBlend>
+                      </filter>
+                    </defs>
+                  </svg>
+                  တုံ့ပြန်ချက်</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="icon//å¸®åŠ©ä¸&shy;å¿ƒ">
+                      <g id="icon//å¸®åŠ©ä¸&shy;å¿ƒ_2">
+                        <circle
+                          id="æ¤&shy;åœ†å½¢"
+                          cx="16"
+                          cy="16"
+                          r="12"
+                          fill="currentColor"
+                        ></circle>
+                        <g id="ç¼–ç»„" filter="url(#filter0_d_55_9254)">
+                          <path
+                            id="Fill 1"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M17.0098 6.66663C16.5437 6.66663 16.1813 6.84164 15.8187 7.19172C15.5081 7.54163 15.301 8.0084 15.301 8.53337C15.301 9.05829 15.4563 9.46674 15.8189 9.87497C16.1295 10.225 16.5437 10.3999 17.0098 10.3999C17.4757 10.3999 17.8382 10.2249 18.2007 9.87497C18.5113 9.52506 18.6667 9.05829 18.6667 8.53337C18.6667 8.0084 18.5113 7.6 18.2007 7.19172C17.8382 6.84164 17.4757 6.66663 17.0096 6.66663H17.0098Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            id="Fill 3"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16.9062 23.3501C16.7508 23.175 16.699 22.8251 16.699 22.3583C16.699 22.1833 16.699 21.8917 16.7508 21.5418C16.8026 21.1917 16.8544 20.8417 16.9062 20.5501L17.5276 16.9333C17.5793 16.5834 17.6311 16.2333 17.6311 15.825C17.6311 15.4168 17.6829 15.125 17.6829 15.0083C17.6829 14.25 17.5276 13.6084 17.165 13.1418C16.8544 12.675 16.3884 12.4418 15.7671 12.4418C15.4563 12.4418 15.0939 12.5585 14.6796 12.7333C14.3172 12.9084 13.9029 13.1418 13.4887 13.4333L13.3333 14.5417C13.4369 14.4834 13.5923 14.3667 13.7477 14.3083C13.9029 14.25 14.11 14.1917 14.2654 14.1917C14.576 14.1917 14.835 14.3083 14.9385 14.4834C15.0421 14.6584 15.0939 15.0083 15.0939 15.4751C15.0939 15.7083 15.0939 16.0001 15.0421 16.2916C14.9904 16.5834 14.9385 16.9333 14.8868 17.2834L14.3172 20.9C14.2654 21.3084 14.2136 21.6 14.2136 21.8917C14.1618 22.1834 14.1618 22.475 14.1618 22.7668C14.1618 23.5251 14.3172 24.1084 14.6796 24.6333C15.0421 25.1001 15.5081 25.3333 16.1295 25.3333C16.5437 25.3333 16.8544 25.275 17.165 25.1001C17.4757 24.925 17.8899 24.6917 18.3561 24.3418L18.5114 23.2334L18.0971 23.4667C17.8899 23.5251 17.7347 23.5834 17.5793 23.5834C17.2686 23.6418 17.0098 23.5251 16.9062 23.3501"
+                            fill="white"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_55_9254"
+                        x="9.33333"
+                        y="4.66663"
+                        width="13.3333"
+                        height="26.6667"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        ></feFlood>
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        ></feColorMatrix>
+                        <feOffset dy="2"></feOffset>
+                        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0.00529494 0 0 0 0 0.154468 0 0 0 0 0.043146 0 0 0 0.758486 0"
+                        ></feColorMatrix>
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_55_9254"
+                        ></feBlend>
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_55_9254"
+                          result="shape"
+                        ></feBlend>
+                      </filter>
+                    </defs>
+                  </svg>
+                  ကူညီရေးဌာန</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3 6.81587C3 6.45106 3.06323 6.12989 3.75573 5.53666C4.18397 5.13754 6.21099 3.35879 6.44275 3.13813C6.6745 2.91747 7.70229 2.87053 7.70229 3.69779V5.93641H12.6565C13.1506 5.93641 14 6.54756 14 7.45548V9.13445C14 9.49287 13.3745 9.77406 13.2443 9.77406C13.114 9.77406 12.4885 9.76518 12.4885 8.8946V7.45548H7.70229V16.4899H12.4885V14.811C12.4885 14.468 12.9145 14.1714 13.2443 14.1714C13.574 14.1714 14 14.4672 14 14.8909V16.6498C14 17.0647 13.4967 17.929 12.6565 17.929H7.70229V20.3276C7.70229 20.6659 6.98939 21.3278 6.44275 20.8073C5.89611 20.2868 3.28969 17.8851 3.16794 17.7691C3.04618 17.6532 3 17.4863 3 17.2894V6.81587Z"
+                      fill="currentColor"
+                    ></path>
+                    <rect
+                      x="9"
+                      y="11"
+                      width="10"
+                      height="2"
+                      rx="1"
+                      fill="currentColor"
+                    ></rect>
+                    <path
+                      d="M19.7687 11.6706C20.3571 12.067 20.3571 12.933 19.7687 13.3294L18.0587 14.4812C17.3944 14.9286 16.5 14.4527 16.5 13.6518L16.5 11.3482C16.5 10.5473 17.3944 10.0714 18.0587 10.5188L19.7687 11.6706Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  ထွက်သည်</a
+                >
+              </li>
+            </ul>
+            <img src="images/myanmarlogo.png" alt="myanmarlogo" />
+          </div> -->
+        </div>
+      </div>
+      <!-- NAVBAR END -->
+
+      <!-- CAROUSEL START -->
+      <div class="" style="margin-top: 60px; padding-top: 10px">
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide carousel-fade px-2"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/banner/banner1.png"
+                style="max-height: 500px"
+                class="d-block w-100"
+                alt="..."
+              />
+              <!-- <div class="marquee">
+                <div class="marquee-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolorem ea id exercitationem. Quos consequuntur vitae soluta
+                  aliquid odit temporibus beatae iste autem?
+                </div>
+              </div> -->
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/banner/banner2.png"
+                style="max-height: 500px"
+                class="d-block w-100"
+                alt="..."
+              />
+              <!-- <div class="marquee">
+                <div class="marquee-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolorem ea id exercitationem. Quos consequuntur vitae soluta
+                  aliquid odit temporibus beatae iste autem?
+                </div>
+              </div> -->
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/banner/banner3.png"
+                style="max-height: 500px"
+                class="d-block w-100"
+              />
+              <!-- <div class="marquee">
+                <div class="marquee-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolorem ea id exercitationem. Quos consequuntur vitae soluta
+                  aliquid odit temporibus beatae iste autem?
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CAROUSEL END -->
+
+      <!-- GAME START -->
+      <div class="game mt-2">
+        <div id="hotgame">
+          <div class="game-content-title">
+            <span>
+              <img
+                src="./images/hotgame.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              ဟော့ဂိမ်းများ
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/olympus.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">Olympus ၏တံခါး</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame2.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">ကြယ်မင်းသမီး</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame3.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">ရွှေခြင်္သေ့ မီဂါဝေး ၅</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-2">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame4.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">နှလုံးသားကို ချိုမြိန်စေတယ်။</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame5.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">ရွှေအင်ပါယာ</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame6.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">super ace</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-2">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame7.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">တာဝန်ခံ Bison</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame8.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">လက်ဝှေ့ချန်ပီယံ</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame9.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">မာဂျောင်</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-2">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame10.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">Mahjong Huh ၂</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame11.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">အမေရိကန်နွားထီး</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/hotgames/hotgame12.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">ကံကြမ္မာ၏ဘုရားသခင်ကိုအနိုင်ရ</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3" id="slot">
+          <div class="game-content-title">
+            <span style="font-size: 16px">
+              <img
+                src="./images/slotlogo.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              စလော့
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none text-white">
+                  <img
+                    src="./images/slotgames/slotgame1.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame2.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame3.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-3">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame4.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame5.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame6.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-3">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame7.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame8.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame9.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-3">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame10.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame11.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/slotgames/slotgame12.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FISH GAME -->
+        <div class="mt-3" id="fish">
+          <div class="game-content-title">
+            <span>
+              <img
+                src="./images/fishgames/fishlogo.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              ငါးဖမ်း
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/fishgames/fishgame1.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">JILIfishing</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/fishgames/fishgame2.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">KA ငါးဖမ်း</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/fishgames/fishgame3.jpg"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">CQ9 ငါးဖမ်း</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-2">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/fishgames/fishgame4.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">JDB ငါးဖမ်း</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/fishgames/fishgame5.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">FG ငါးဖမ်း</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/fishgames/fishgame6.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">BG ငါးဖမ်း</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIVE CASINO -->
+        <div class="mt-3" id="casino">
+          <div class="game-content-title">
+            <span>
+              <img
+                src="./images/livecasino/casinologo.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              LIVE Casino
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino1.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">AG Live casino</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino2.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">EVO Live casino</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino3.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">DG Live casino</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-2">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino4.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">BBIN Live casino</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino5.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">BG Live casino</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino6.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">CQ9 Live casino</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="row mx-1 mt-2">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino7.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">AE Live casino</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino8.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">OG Live casino</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/livecasino/casino9.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">WM Live casino</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SPORT -->
+        <div class="mt-3" id="sport">
+          <div class="game-content-title">
+            <span>
+              <img
+                src="./images/sport/sportlogo.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              SPORT
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/sport/sport1.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">BTI အားကစား</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/sport/sport2.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">Saba အားကစား</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/sport/sport3.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">UG အားကစား</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ကဒ်ဂိမ်း -->
+        <div class="mt-3" id="card">
+          <div class="game-content-title">
+            <span>
+              <img
+                src="./images/card/cardlogo.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              ကဒ်ဂိမ်း
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/card/card1.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">FG ကဒ်ဂိမ်း</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/card/card2.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">KS စစ်တုရင်ကစားနည်း</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/card/card3.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">V8 စစ်တုရင်နှင့်ကတ်များ</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Esports -->
+        <div class="mt-3" id="esport">
+          <div class="game-content-title">
+            <span>
+              <img
+                src="./images/esport/esportlogo.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              Esports
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/esport/esport1.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">TF Esports</span>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/esport/esport2.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">IM Esports</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ကြက်တိုက်ခြင်း။ -->
+        <div class="mt-3" id="chicken">
+          <div class="game-content-title">
+            <span>
+              <img
+                src="./images/chickenfight/chickenfightlogo.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              ကြက်တိုက်ခြင်း။
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/chickenfight/chicken1.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">SV388ကြက်တိုက်ပွဲ</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ထီ -->
+        <div class="mt-3" id="lottory">
+          <div class="game-content-title">
+            <span>
+              <img
+                src="./images/lottery/lottorylogo.png"
+                alt="hotgame"
+                style="width: 30px; height: 30px"
+                class="ms-2"
+              />
+              ထီ
+            </span>
+          </div>
+          <div class="game-content mt-2">
+            <div class="row mx-1">
+              <div class="col-4">
+                <a href="#" class="text-decoration-none">
+                  <img
+                    src="./images/lottery/lottory1.png"
+                    alt="olympus"
+                    style="width: 100%; border-radius: 10px; display: block"
+                  />
+                  <span class="text-center">BBIN ထီ</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- GAME END -->
+
+      <!-- FOOTER INFO START-->
+
+      <!-- FOOTER INFO END-->
+      <div class="footerinfo d-flex flex-column align-items-center mt-4">
+        <img
+          src="https://delightmyanmar.pro/user_app/assets/img/logo.png"
+          alt="logo"
+          class="mb-3"
+          style="width: 100px; height: 100px"
+        />
+        <div class="footer-logo">
+          <img
+            src="https://www.iw021.com/img/google.0de8c058.png"
+            alt="google"
+          />
+
+          <img
+            src="https://www.iw021.com/img/google.0de8c058.png"
+            alt="google"
+          />
+
+          <img
+            src="https://www.iw021.com/img/google.0de8c058.png"
+            alt="google"
+          />
+
+          <img
+            src="https://www.iw021.com/img/google.0de8c058.png"
+            alt="google"
+          />
+
+          <img
+            src="https://www.iw021.com/img/google.0de8c058.png"
+            alt="google"
+          />
+
+          <img
+            src="https://www.iw021.com/img/google.0de8c058.png"
+            alt="google"
+          />
+        </div>
+        <div class="footer-text">
+          ဤဆိုက်သည် စွန့်စားခန်းအတွေ့အကြုံရှိသော ဂိမ်းများကို ပေးသည်။
+          ကျွန်ုပ်တို့၏ site ကိုအသုံးပြုသူတစ်ဦးဖြစ်လာရန်၊ သင်သည် အနည်းဆုံး အသက်
+          18 နှစ်ရှိရမည်။ အွန်လိုင်းဂိမ်းကစားခြင်းနှင့်ပတ်သက်၍
+          သင့်ဒေသဆိုင်ရာဥပဒေများကို ချိုးဖောက်မှုအတွက် ကျွန်ုပ်တို့တွင်
+          တာဝန်မရှိပါ။ တာဝန်သိစွာကစားပြီး ဖိလစ်ပိုင်ရှိ ရေပန်းအစားဆုံး
+          မိုင်းဂိမ်းဖြင့် ပျော်ရွှင်လိုက်ပါ။
+        </div>
+        <div class="footer-img my-4">
+          <img src="./images/footer/1.png" alt="" />
+          <img src="./images/footer/2.png" alt="" />
+          <img src="./images/footer/3.png" alt="" />
+          <img src="./images/footer/4.png" alt="" />
+          <img src="./images/footer/5.png " alt="" />
+          <img src="./images/footer/6.png" alt="" />
+          <img src="./images/footer/7.png" alt="" />
+        </div>
+
+        <div class="text-center" style="color: #999a9a; padding-bottom: 30px">
+          Copyright © 2023. All rights reserved.
+        </div>
+      </div>
+      <!-- FOOTER START -->
+      <footer class="fixed-bottom mx-auto">
+        <div class="d-flex justify-content-between align-items-center">
+          <a
+            class="text-center"
+            data-bs-toggle="offcanvas"
+            href="#sidebar"
+            role="button"
+            aria-controls="offcanvasExample"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4 4H20.7865V7.04686H4V4Z" fill="currentColor"></path>
+              <path
+                d="M4 9.97657H20.7865V13.0234H4V9.97657Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M20.7865 15.9531H4V19H20.7865V15.9531Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <!-- <img src="./assets/img/footer_1.png" class="ps-2" alt=""> -->
+            <div class="footer-text">မီနူး</div>
+          </a>
+          <a href="#" class="text-center">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.3559 4.71877H10.7771C10.9301 4.47839 11.0209 4.18589 11.0209 3.87164C11.0209 2.99152 10.3072 2.27789 9.42712 2.27789C8.547 2.27789 7.83337 2.99152 7.83337 3.87164C7.83337 2.99152 7.11975 2.27789 6.23962 2.27789C5.3595 2.27789 4.64587 2.99152 4.64587 3.87164C4.64587 4.18552 4.73662 4.47839 4.89337 4.72514L4.88962 4.71877H3.31087C3.01275 4.71877 2.77087 4.96064 2.77087 5.25877V6.42877C2.77087 6.72689 3.01275 6.96877 3.31087 6.96877H12.3559C12.654 6.96877 12.8959 6.72689 12.8959 6.42877V5.25877C12.8959 4.96064 12.654 4.71877 12.3559 4.71877ZM8.77087 3.87502C8.77087 3.51277 9.06487 3.21877 9.42712 3.21877C9.78937 3.21877 10.0834 3.51277 10.0834 3.87502C10.0834 4.23727 9.78937 4.53127 9.42712 4.53127H8.77087V3.87502ZM6.23962 3.21877C6.60187 3.21877 6.89587 3.51277 6.89587 3.87502V4.53127H6.23962C5.87737 4.53127 5.58337 4.23727 5.58337 3.87502C5.58337 3.51277 5.87737 3.21877 6.23962 3.21877Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M3.52087 13.0625C3.52087 13.4281 3.81712 13.7244 4.18275 13.7244H6.89587V8.09937H3.52087V13.0625Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M8.77087 13.7188H11.484C11.8477 13.7188 12.1425 13.4255 12.1459 13.0629V8.09375H8.77087V13.7188Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <div class="footer-text">ဘောနပ်စ်</div>
+          </a>
+          <a href="./promotion.html" class="text-center">
+            <div class="footer-item">
+              <img
+                src="./images/wallet.gif"
+                alt="wallet"
+                style="width: 30px; height: 30px"
+              />
+              <div class="footer-text mt-1" style="font-size: 12px">
+                ပရိုမိုရှင်း
+              </div>
+            </div>
+          </a>
+          <a href="./agent.html" class="text-center">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.2398 6.8C13.5631 6.8 14.6398 5.72333 14.6398 4.4C14.6398 3.07667 13.5631 2 12.2398 2C10.9164 2 9.83977 3.07667 9.83977 4.4C9.83977 4.57227 9.85981 4.73984 9.89447 4.90187L7.81224 5.94277C7.26509 5.36534 6.49627 5 5.63977 5C3.98567 5 2.63977 6.3459 2.63977 8C2.63977 9.6541 3.98567 11 5.63977 11C6.49622 11 7.26509 10.6347 7.81224 10.0572L9.89445 11.0981C9.85976 11.2602 9.83977 11.4277 9.83977 11.6C9.83977 12.9233 10.9164 14 12.2398 14C13.5631 14 14.6398 12.9234 14.6398 11.6C14.6398 10.2766 13.5631 9.2 12.2398 9.2C11.5197 9.2 10.8801 9.52548 10.4399 10.0294L8.4455 9.03212C8.56484 8.70898 8.63977 8.36417 8.63977 8C8.63977 7.63583 8.56484 7.29102 8.4455 6.96788L10.44 5.97092C10.8803 6.4748 11.5197 6.8 12.2398 6.8ZM12.2398 10.4C12.9016 10.4 13.4398 10.9385 13.4398 11.6C13.4398 12.2615 12.9016 12.8 12.2398 12.8C11.5779 12.8 11.0398 12.2615 11.0398 11.6C11.0398 10.9385 11.5779 10.4 12.2398 10.4ZM5.63977 9.8C4.64719 9.8 3.83977 8.99258 3.83977 8C3.83977 7.00742 4.64719 6.2 5.63977 6.2C6.63235 6.2 7.43977 7.00742 7.43977 8C7.43977 8.99258 6.63235 9.8 5.63977 9.8ZM12.2398 3.2C12.9016 3.2 13.4398 3.73848 13.4398 4.4C13.4398 5.06152 12.9016 5.6 12.2398 5.6C11.5779 5.6 11.0398 5.06152 11.0398 4.4C11.0398 3.73848 11.5779 3.2 12.2398 3.2Z"
+                fill="url(#paint0_linear_127_2758)"
+              ></path>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_127_2758"
+                  x1="5.85746"
+                  y1="3.54174"
+                  x2="14.774"
+                  y2="12.4583"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#59FFC2"></stop>
+                  <stop offset="1" stop-color="#4551FF"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="footer-text">မြှင့်တင်ပါ။</div>
+          </a>
+          <a href="./index.html" class="text-center">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.65615 11.2253L2.01909 4.43216C1.99021 4.35873 1.97314 4.27382 1.97314 4.1848C1.97314 3.87058 2.18404 3.60271 2.48025 3.49851L2.48551 3.49687L6.7034 2.05825C6.78347 2.02954 6.87579 2.01313 6.97249 2.01313C7.30502 2.01313 7.58898 2.20962 7.69924 2.48528L7.70099 2.49021L7.85282 2.88401L4.74934 10.8861C4.71128 10.9821 4.6789 11.0961 4.6579 11.2138L4.65615 11.2253ZM15.9272 4.6184L12.4737 13.5229C12.3634 13.8035 12.0808 14 11.7491 14C11.6533 14 11.5614 13.9836 11.4765 13.9536L11.4818 13.9553L6.68065 12.3144C6.37918 12.2086 6.16829 11.9407 6.16829 11.6265C6.16829 11.5379 6.18491 11.453 6.21598 11.3742L6.21423 11.3791L9.66774 2.48036C9.77888 2.19772 10.0637 2 10.3976 2C10.4916 2 10.5818 2.01559 10.6649 2.0443L10.6596 2.04266L15.4608 3.68352C15.7623 3.78935 15.9731 4.05722 15.9731 4.37145C15.9731 4.46006 15.9565 4.54497 15.9255 4.62373L15.9272 4.6184ZM13.0106 8.1405L12.7073 7.47308C12.6465 7.34017 12.5083 7.2491 12.3472 7.2491C12.2943 7.2491 12.2435 7.25895 12.1972 7.277L12.1998 7.27618L11.6165 7.51697C11.5728 7.5342 11.5225 7.54405 11.4691 7.54405C11.3081 7.54405 11.1698 7.45298 11.1099 7.32253L11.109 7.32007L10.8583 6.77325C10.7983 6.6424 10.6623 6.55215 10.5034 6.55215C10.4483 6.55215 10.3958 6.56322 10.3481 6.5825L10.3507 6.58168L9.63318 6.86596C9.49272 6.92011 9.39559 7.04728 9.39559 7.19578C9.39559 7.24869 9.40784 7.29874 9.43016 7.34386L9.42928 7.34181L10.2869 9.23987C10.3503 9.37032 10.4886 9.45934 10.6487 9.45934C10.7034 9.45934 10.7555 9.44908 10.8027 9.43021L10.8001 9.43103L12.8185 8.62168C12.9471 8.56302 13.0342 8.4416 13.0342 8.30089C13.0342 8.24223 13.0189 8.18726 12.9922 8.13845L12.9931 8.1405H13.0106Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <div class="footer-text">ဂိမ်း</div>
+          </a>
+        </div>
+      </footer>
+      <!-- FOOTER END -->
+    </div>
+
+    <!-- SIDE BAR -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="sidebar"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body text-white">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="index.html" class="text-decoration-none">
+              <div class="d-flex">
+                <img src="./images/sidebaricon/back.png" alt="back" />
+                <p class="ps-3">ရှေ့စာမျက်နှာ</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img src="./images/sidebaricon/all.png" alt="all" />
+                <p class="ps-3">အားလုံး</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#hotgame" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img src="./images/hotgame.png" alt="hotgame" />
+                <p class="ps-3">ဟော့ဂိမ်းများ</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#slot" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img src="./images/slotlogo.png" alt="slot" />
+                <p class="ps-3">စလော့</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#fish" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img src="./images/fishgames/fishlogo.png" alt="fish" />
+                <p class="ps-3">ငါးဖမ်း</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#casino" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img
+                  src="./images/livecasino/casinologo.png"
+                  alt="livecasino"
+                />
+                <p class="ps-3">LIVE Casino</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#sport" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img src="./images/sport/sportlogo.png" alt="livecasino" />
+                <p class="ps-3">SPORT</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#card" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img src="./images/card/cardlogo.png" alt="card" />
+                <p class="ps-3">ကဒ်ဂိမ်း</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#esport" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img src="./images/esport/esportlogo.png" alt="esport" />
+                <p class="ps-3">Esports</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#chicken" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img
+                  src="./images/chickenfight/chickenfightlogo.png"
+                  alt="chickenfight"
+                />
+                <p class="ps-3">ကြက်တိုက်ခြင်း။</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#lottory" class="text-decoration-none">
+              <div class="d-flex list-card">
+                <img src="./images/lottery/lottorylogo.png" alt="lottery" />
+                <p class="ps-3">ထီ</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- <div class="dropdown mt-3">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- TOP UP AND WITHDRAW -->
+    <div
+      class="modal fade"
+      id="topupModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-white">
+            <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex align-items-center">
+              <div
+                id="topup"
+                class="wallet rounded border-1 p-2 text-white active"
+              >
+                ငွေသွင်းရန်
+              </div>
+              <div
+                id="withdraw"
+                class="wallet rounded ms-3 border-1 p-2 text-white"
+              >
+                ငွေထုတ်ရန်
+              </div>
+            </div>
+
+            <div class="topup my-3">
+              <div class="topuptypes">
+                <h4 class="text-white">ငွေပေးချေမှုအမျိုးအစားများ</h4>
+                <div class="d-flex justify-content-around mt-2">
+                  <div class="bank ck text-center w-100 active pt-3">
+                    <img src="./images/bank/kpay.png" alt="" />
+                    <p class="text-center">K Pay</p>
+                  </div>
+                  <div class="bank cb text-center w-100 ms-1 pt-3">
+                    <img src="./images/bank/cbpay.png" alt="" />
+                    <p class="text-center">CB Pay</p>
+                  </div>
+                  <div class="bank text-center w-100 ms-1 pt-3">
+                    <img src="./images/bank/wpay.png" alt="" />
+                    <p class="text-center">Wave Pay</p>
+                  </div>
+                  <div class="bank text-center w-100 ms-1 pt-3">
+                    <img src="./images/bank/aya_logo.png" alt="" />
+                    <p class="text-center">Aya Pay</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-2">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="amount" class="form-label text-white fw-bold"
+                      >သွင်းငွေပမာဏ</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amount"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label text-white fw-bold"
+                      >ငွေသွင်းသူဖုန်းနံပါတ်</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="phone"
+                      autocomplete="off"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="withdraw my-3 d-none">
+              <div class="topuptypes">
+                <h4 class="text-white">ငွေပေးချေမှုအမျိုးအစားများ withdraw</h4>
+                <div class="d-flex justify-content-around mt-2">
+                  <div class="bank ck text-center w-100 active pt-3">
+                    <img src="./images/bank/kpay.png" alt="" />
+                    <p class="text-center">K Pay</p>
+                  </div>
+                  <div class="bank cb text-center w-100 ms-1 pt-3">
+                    <img src="./images/bank/cbpay.png" alt="" />
+                    <p class="text-center">CB Pay</p>
+                  </div>
+                  <div class="bank text-center w-100 ms-1 pt-3">
+                    <img src="./images/bank/wpay.png" alt="" />
+                    <p class="text-center">Wave Pay</p>
+                  </div>
+                  <div class="bank text-center w-100 ms-1 pt-3">
+                    <img src="./images/bank/aya_logo.png" alt="" />
+                    <p class="text-center">Aya Pay</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-2">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="amount" class="form-label text-white fw-bold"
+                      >သွင်းငွေပမာဏ</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amount"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label text-white fw-bold"
+                      >ငွေသွင်းသူဖုန်းနံပါတ်</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="phone"
+                      autocomplete="off"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!-- <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button> -->
+            <button class="btn-login">ငွေဖြည့်မည်</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script>
+    $("#topup").click(function () {
+      $("#withdraw").removeClass("active");
+      $("#topup").addClass("active");
+
+      $(".topup").removeClass("d-none");
+      $(".withdraw").addClass("d-none");
+    });
+
+    $("#withdraw").click(function () {
+      $("#withdraw").addClass("active");
+      $("#topup").removeClass("active");
+
+      $(".withdraw").removeClass("d-none");
+      $(".topup").addClass("d-none");
+    });
+
+    const banks = document.querySelectorAll(".bank");
+
+    banks.forEach((bank) => {
+      bank.addEventListener("click", function () {
+        banks.forEach((other) => {
+          other.classList.remove("active");
+        });
+        this.classList.add("active");
+      });
+    });
+  </script>
+</html>
